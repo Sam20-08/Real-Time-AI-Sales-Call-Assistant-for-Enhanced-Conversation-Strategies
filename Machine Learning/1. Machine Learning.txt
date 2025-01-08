@@ -1,0 +1,57 @@
+1.	Which of the following statement is the correct one?
+
+	Classification is a supervised machine learning problem
+
+2.	Select which of the following scenarios are classification problems.
+
+	Predict if a Titanic passenger lives or dies due to their age, class, and gender.
+
+3.	At what point in the pipeline process are the parameters adjusted?
+
+	Training
+
+4.	What are some common evaluation metrics used for classification tasks?
+
+	Accuracy
+
+5.	Decision trees can be used for both classification and regression tasks.
+
+	True
+
+6.	In a learning problem with 2D features, what is the relationship between decision tree and 1-nearest neighbor decision boundaries?
+
+	In both cases, the decision boundary is piecewise linear.
+
+7.	What does 'naive' mean in Naive Bayes?
+
+	The model assumes that the input features are statistically independent of one another.
+
+8.	How does ensemble learning improve model performance?
+
+	The models in an ensemble are trained independently, and their predictions are combined in some way to produce the final output.
+
+9.	Given a confusion matrix for a binary classification problem, how would you compute the precision score?
+
+	Precision = True Positives / (True Positives + False Positives)
+
+10.	Compute the precision score to one decimal place:
+
+	Precision = 15 / (15 + 10) = 0.6
+
+11.	Compute the recall score to one decimal place:
+
+	Recall = True Positives / (True Positives + False Negatives) = 20 / (20 + 5) = 0.8
+
+12.	As a reviewer for an international conference, would you accept or reject this paper?
+
+	Reject
+
+13.	For k cross-validation, larger k value implies more bias:
+
+	False
+
+14.	Scenario fit based on models:
+
+	Model 3 fits better a High Bias scenario
+	Model 2 fits better a High Variance scenario
+
