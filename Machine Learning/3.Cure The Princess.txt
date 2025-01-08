@@ -1,0 +1,32 @@
+1. Which variable presents the highest correlation with the target?
+
+	Answer: Witch's Brew
+
+2. Is the distribution of the target variable in your dataset balanced or imbalanced?
+
+	Answer: Imbalanced
+
+3. Did you find any missing value?
+
+	Answer: Yes, there is 1% of missing values for the dataset
+
+4. Train and test split
+
+	Answer: 
+Features (X): All columns except "Cured"
+Target (y): Column "Cured"
+Train-Test Split: 
+	Train set: 80% of the data
+	Test set: 20% of the data
+	Random state: 0
+
+
+5. Model
+
+	Answer: 
+
+Algorithm: Linear SVM (LinearSVC)
+Standardization: StandardScaler
+Performance: 
+	F1-Score (Train): ~85%
+	F1-Score (Test): ~85%

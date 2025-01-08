@@ -1,0 +1,165 @@
+1. Extracting Insights from Customer Data
+
+def get_total_orders(customer_list):
+    total_orders = sum(len(customer['orders']) for customer in customer_list)
+    return total_orders
+
+# Example usage:
+customer_data = [
+    {'name': 'Alice', 'age': 30, 'orders': [101, 103, 105]},
+    {'name': 'Bob', 'age': 25, 'orders': [102, 104]},
+    {'name': 'Charlie', 'age': 28, 'orders': [106]}
+]
+
+print(get_total_orders(customer_data)) 
+
+2. Temperature Data Mapping
+
+temperature_dict = {}
+for day, temp in zip(days, temperature_data):
+    temperature_dict[day] = temp
+
+
+
+3.Inventory Revenue Calculation
+
+def calculate_total_revenue(inventory):
+    total_revenue = sum(item['quantity'] * item['price'] for item in inventory)
+    return total_revenue
+
+# Example usage:
+inventory = [
+    {'product_id': 101, 'name': 'Apple', 'quantity': 50, 'price': 0.5},
+    {'product_id': 102, 'name': 'Banana', 'quantity': 30, 'price': 0.3},
+    {'product_id': 103, 'name': 'Orange', 'quantity': 40, 'price': 0.4}
+]
+
+print(calculate_total_revenue(inventory)) 
+
+
+4.Social Media Engagement Rate
+
+def calculate_engagement_rate(posts):
+    total_engagement = sum(post['likes'] + post['comments'] + post['shares'] for post in posts)
+    avg_engagement_rate = total_engagement / len(posts)
+    return avg_engagement_rate
+
+5.Shared Course Enrollments
+
+def find_common_courses(students):
+    course_counter = {}
+    for student in students:
+        for course in student['courses']:
+            course_counter[course] = course_counter.get(course, 0) + 1
+
+    common_courses = {course for course, count in course_counter.items() if count >= 2}
+    return common_courses
+
+
+6.Duplicate Data Check
+
+unique_entries = []
+for entry in data_entries:
+    if entry not in unique_entries:
+        unique_entries.append(entry)
+
+
+7.Student Exam Scores
+
+score_dict = {}
+for i, student in enumerate(students):
+    score_dict[student] = scores[i]
+
+
+8.Employee Count by Department
+
+department_count = {}
+for i in range(len(employees)):
+    department = departments[i]
+    if department in department_count:
+        department_count[department] += 1
+    else:
+        department_count[department] = 1
+
+9.Shopping Cart Total
+
+total_cost = 0
+for price, quantity in zip(prices, quantities):
+    total_cost += price * quantity
+
+10.Word Frequency Counter
+
+word_frequency = {}
+for word in words:
+    word_frequency[word] = word_frequency.get(word, 0) + 1
+
+
+11.Matrix Transposition
+
+transposed_matrix = []
+for i in range(len(matrix[0])):
+    transposed_row = [row[i] for row in matrix]
+    transposed_matrix.append(transposed_row)
+
+
+12.Nested Dictionary Manipulation
+
+average_grades = {}
+for student in students:
+    info = students[student]
+    grades_sum = sum(info['grades'])
+    average_grades[student] = grades_sum / len(info['grades'])
+
+
+13.User Message Summary
+
+user_summary = {}
+for message in messages:
+    user = message['to']
+    if user in user_summary:
+        user_summary[user]['total_messages'] += 1
+        if not message['is_read']:
+            user_summary[user]['unread'] += 1
+    else:
+        user_summary[user] = {'total_messages': 1, 'unread': 1}
+        if not message['is_read']:
+            user_summary[user]['unread'] += 1
+
+
+14.Employee Salary Calculation
+
+salaries = {}
+for employee in employees:
+    employee_id = employee['employee_id']
+    salary = employee['hours_worked'] * employee['hourly_rate']  # Calculate correct salary
+    salaries[employee_id] = salary
+
+
+15.Task Completion Progress
+
+incomplete_tasks = []
+for task in tasks:
+    if task['status'] == 'In Progress' and task['completed_percent'] < 100:
+        incomplete_tasks.append(task['description'])
+
+
+16.User Activity Tracking
+
+user_engagement = {}
+for user in user_activity:
+    total_engagement = user['likes'] + user['comments']
+    user_engagement[user['user_id']] = total_engagement
+
+print(user_engagement)
+
+
+17.User Account Management
+
+active_usernames = [user['username'] for user in user_accounts if user['is_active']]
+
+
+18.Product Inventory
+
+inventory_value = 0
+for i in range(len(products)):
+    inventory_value += products[i]['price'] * products[i]['quantity']
