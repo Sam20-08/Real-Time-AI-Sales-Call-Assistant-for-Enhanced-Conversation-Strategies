@@ -1,0 +1,149 @@
+1. Find the Index of Pi in a Given List
+
+Q: Identify the prospective index of Pi in the list maths_constants.
+
+A: To find the index of Pi, you would first need to iterate through the list and consider its alternating pattern of string constants and numeric values.
+maths_constants = [['e', 2.718], ['Pi', 3.14159], ['g', 9.8]]
+index_pi = [i[0] for i in maths_constants].index('Pi')
+print(index_pi)  # Output: 1
+
+2. Insert the value 3.1416 after the name Pi in the list of maths_constants
+
+Q: Insert the value 3.1416 after the name Pi in the list maths_constants.
+
+A: maths_constants = [['e', 2.718], ['Pi', 3.14159], ['g', 9.8]]
+index_pi = [i[0] for i in maths_constants].index('Pi')
+maths_constants.insert(index_pi + 1, ['Pi', 3.1416])
+print(maths_constants)  # [['e', 2.718], ['Pi', 3.14159], ['Pi', 3.1416], ['g', 9.8]]
+
+3. Extend the list by adding all the elements from the given string
+
+Q: Add all the characters of even_string to the end of odd_list.
+
+A: odd_list = [99, 101, 103, 105, 107, 109]
+even_string = '24689'
+odd_list.extend(even_string)
+print(odd_list)  # [99, 101, 103, 105, 107, 109, '2', '4', '6', '8', '9']
+
+4. Remove the last element from the list odd_list
+
+Q: Remove the last element ('9') from the odd_list.
+
+A: odd_list = [99, 101, 103, 105, 107, 109, '2', '4', '6', '8', '9']
+odd_list.pop()
+print(odd_list)  # [99, 101, 103, 105, 107, 109, '2', '4', '6', '8']
+
+5. How many students are there in the dataset student_list?
+
+Q: Determine the number of students in student_list.
+
+A: student_list = [['Alice', '101', '17', 'A', 'Math'], ['Bob', '102', '18', 'B', 'Science'], ...]
+num_students = len(student_list)
+print(num_students)  # Example Output: 500
+
+6. What's the name of the 400th student in our student_list?
+
+Q: Find the name of the 400th student.
+
+A: student_list = [['Alice', '101', '17', 'A', 'Math'], ['Bob', '102', '18', 'B', 'Science'], ...]
+name_400th_student = student_list[399][0]
+print(name_400th_student)  # Example Output: 'John'
+
+7. Check the correct age and subject of our student at 273rd index
+
+Q: Check the correct age and subject of the student at index 273.
+
+A:student_list = [['Alice', '101', '17', 'A', 'Math'], ['Bob', '102', '18', 'B', 'Science'], ...]
+age = student_list[272][2]
+subject = student_list[272][4]
+print(f"Age: {age}, Subject: {subject}")  # Example Output: Age: 19, Subject: Science
+
+8. Put the students from index 98 to 214 into the list select_student
+
+Q: Create a list select_student from index 98 to 214.
+
+A: select_student = student_list[98:214]
+print(select_student)  # Example Output: List with students from 98 to 214
+
+9. Find the name, age, grade, subject of the last student from the select_student list
+
+Q: Find the details of the last student in the select_student list.
+
+A:name, age, grade, subject = select_student[-1][:4]
+print(f"Name: {name}, Age: {age}, Grade: {grade}, Subject: {subject}")
+
+10. Get the age of each student and store it in the list students_age
+
+Q: Get the age of each student and store it in students_age.
+
+A: students_age = [int(student[2]) for student in student_list]
+print(students_age)  # Output: List of students' ages
+
+11. What is the average age of the students?
+
+Q: Calculate the average age from students_age.
+
+A: average_age = sum(students_age) / len(students_age)
+print(f"Average Age: {average_age}")
+
+12. How many students have History, English, and Math as their subjects?
+
+Q: Count the students with History, English, and Math subjects.
+
+A:history_lovers = len([student for student in student_list if 'History' in student[4]])
+english_lovers = len([student for student in student_list if 'English' in student[4]])
+maths_lovers = len([student for student in student_list if 'Math' in student[4]])
+
+print(f"History: {history_lovers}, English: {english_lovers}, Math: {maths_lovers}")
+
+13. Separate all A graders and all B graders from the list student_list
+
+Q: Separate students into a_graders and b_graders.
+
+A:a_graders = [student for student in student_list if student[2] == 'A']
+b_graders = [student for student in student_list if student[2] == 'B']
+print(a_graders, b_graders)
+
+14. Find the grade of a particular student.
+
+Q: Find the grade of the student named Isaac with age 16 and subject Science.
+
+A:grade = next(student[2] for student in student_list if student[0] == 'Isaac' and student[1] == '16' and student[4] == 'Science')
+print(grade)  # Example Output: 'A'
+
+15. How many students' names start with 'S'?
+
+Q: Count the number of students whose name starts with 'S'.
+
+A:students_with_s = len([student for student in student_list if student[0].startswith('S')])
+print(students_with_s)  # Example Output: 37
+
+16. How many students are under 17?
+
+Q: Count the number of students under 17.
+
+A: students_under_17 = len([student for student in student_list if int(student[2]) < 17])
+print(students_under_17)  # Example Output: 145
+
+17. What is the minimum & maximum age of the students?
+
+Q: Find the minimum and maximum age.
+
+A: min_age = min(students_age)
+max_age = max(students_age)
+print(f"Min: {min_age}, Max: {max_age}"
+
+18. Remove the student from the list student_list
+
+Q: Remove the student whose name is Luna, age is 18, grade is E, and subject is Geography.
+
+A: student_list = [student for student in student_list if student != ['Luna', '18', 'E', 'Geography']]
+print(student_list)
+
+19. Count the number of occurrences of the student in the student_list
+
+Q: Count the occurrences of the student named Luna and age 16.
+
+A: occurrences = sum(1 for student in student_list if student[0] == 'Luna' and student[2] == '16')
+print(occurrences)  # Example Output: 2
+

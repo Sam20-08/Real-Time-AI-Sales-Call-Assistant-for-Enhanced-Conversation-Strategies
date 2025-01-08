@@ -1,0 +1,135 @@
+1.Find the Total Number of Companies Listed
+
+total_companies = len(job_listings_by_company_title)
+
+2.List Job Titles for a Company
+
+company_name = 'IBM'
+job_titles = list(job_listings_by_company_title[company_name].keys())
+
+3.Extract Job Details by ID
+
+def get_job_details_by_id(job_id):
+    return job_details_by_id.get(job_id, None)
+
+4.Find Companies with Remote Jobs
+
+remote_companies = []
+for company, jobs in job_listings_by_company_title.items():
+    for title, details in jobs.items():
+        job_id = details['id']
+        if job_details_by_id[job_id]['type'] == 'remote' and company not in remote_companies:
+            remote_companies.append(company)
+
+5.Calculate the Average Salary
+
+total_salary = 0
+job_count = 0
+for company, jobs in job_listings_by_company_title.items():
+    for title, details in jobs.items():
+        total_salary += details['salary']
+        job_count += 1
+average_salary = round(total_salary / job_count)
+
+6.Find the Highest Salary
+
+highest_salary = 0
+for company, jobs in job_listings_by_company_title.items():
+    for title, details in jobs.items():
+        highest_salary = max(highest_salary, details['salary'])
+highest_salary = round(highest_salary)
+
+
+7. Find the Company with the Most Job Listings
+
+max_jobs = 0
+company_with_most_jobs = ''
+for company, jobs in job_listings_by_company_title.items():
+    if len(jobs) > max_jobs:
+        max_jobs = len(jobs)
+        company_with_most_jobs = company
+    elif len(jobs) == max_jobs and company < company_with_most_jobs:
+        company_with_most_jobs = company
+
+8.Job Type Distribution
+
+def get_job_type_distribution(company_name):
+    if company_name not in job_listings_by_company_title:
+        return None
+    distribution = {'onsite': 0, 'remote': 0, 'hybrid': 0}
+    for title, details in job_listings_by_company_title[company_name].items():
+        job_id = details['id']
+        job_type = job_details_by_id[job_id]['type']
+        distribution[job_type] += 1
+    return distribution
+
+9.Location Statistics
+
+def get_location_statistics(company_name):
+    if company_name not in job_listings_by_company_title:
+        return None
+    location_stats = {}
+    for title, details in job_listings_by_company_title[company_name].items():
+        job_id = details['id']
+        location = job_details_by_id[job_id]['location']
+        location_stats[location] = location_stats.get(location, 0) + 1
+    return location_stats
+
+10.Salary Range Distribution
+
+salary_range_distribution = {
+    (0, 50000): 0,
+    (50000, 75000): 0,
+    (75000, 100000): 0,
+    (100000, float('inf')): 0
+}
+
+for company, jobs in job_listings_by_company_title.items():
+    for title, details in jobs.items():
+        salary = details['salary']
+        for salary_range in salary_range_distribution:
+            if salary_range[0] <= salary < salary_range[1]:
+                salary_range_distribution[salary_range] += 1
+
+11.Apply Salary Increment
+
+for company, jobs in job_listings_by_company_title.items():
+    for title, details in jobs.items():
+        details['salary'] = details['salary'] * 1.10
+
+
+12.Find all jobs in a specific location
+
+def get_jobs_by_location(location):
+    job_ids = []
+    for company, jobs in job_listings_by_company_title.items():
+        for title, details in jobs.items():
+            job_id = details['id']
+            if job_details_by_id[job_id]['location'] == location:
+                job_ids.append(job_id)
+    return list(set(job_ids))
+
+13.Remove Job Listings by Location
+
+location_to_remove = 'Johannesburg, Gauteng, South Africa'
+for company, jobs in list(job_listings_by_company_title.items()):
+    for title, details in list(jobs.items()):
+        job_id = details['id']
+        if job_details_by_id[job_id]['location'] == location_to_remove:
+            del jobs[title]
+            del job_details_by_id[job_id]
+
+14.Create Company Name Abbreviations
+
+def get_company_name_abbreviation(company_name):
+    words = company_name.split()
+    abbreviation = ''.join([word[0] for word in words])
+    return abbreviation if company_name in job_listings_by_company_title else None
+
+15.Create a dictionary of Company name and abbreviation
+
+company_name_abbreviation = {
+    company: get_company_name_abbreviation(company) 
+    for company in job_listings_by_company_title
+}
+

@@ -1,0 +1,67 @@
+1.Access the values using key
+
+lebron_height = players_data['LeBron James']['height']
+
+2.Add a new player to the player data dictionary
+
+players_data['Stephen Curry'] = {
+    'jersey': 30,
+    'team': 'Golden State Warriors',
+    'position': 'PG',
+    'rating': 97,
+    'salary': 40231758,
+    'height': '6-3 / 1.91',
+    'weight': '185 lbs',
+    'dob': 'March 14, 1988',
+    'country': 'USA',
+    'college': 'Davidson',
+    'draft_year': 2009,
+    'draft_round': 1,
+    'draft_peak': 7
+}
+
+3.Remove the salary value for 'Kevin Durant'
+
+del players_data['Kevin Durant']['salary']
+
+4.Access the keys and values of dictionary
+
+players_names = list(players_data.keys())
+players_details = list(players_data.values())
+
+5.Find the number of players in the player data dictionary
+
+num_players = len(players_data)
+
+6.Create a new dictionary players_rating
+
+players_rating = {player: data['rating'] for player, data in players_data.items()}
+
+7.Check if value is present or not in the dictionary
+
+'Joel Embiid' in players_data  # False
+'Jimmy' in players_data  # False
+
+8.Merge two dictionaries
+
+players_data_merged = {player: {**player_stats.get(player, {}), **{'salary': player_salaries.get(player)}} for player in player_stats}
+
+9.Update the values for 'Mike Conley'
+
+players_data['Mike Conley']['rating'] = 95
+players_data['Mike Conley']['salary'] = '$34,000,000'
+
+10.Create a new dictionary with specific country
+
+players_data_usa = {player: [data['rating'], data['team']] for player, data in players_data.items() if data['country'] == 'USA'}
+
+11.Create a new dictionary of teams from players_data
+
+teams = {}
+for data in players_data.values():
+    teams[data['team']] = teams.get(data['team'], 0) + 1
+
+12.Copy the dictionary and clear all the elements
+
+players_data_copy = players_data.copy()
+players_data.clear()

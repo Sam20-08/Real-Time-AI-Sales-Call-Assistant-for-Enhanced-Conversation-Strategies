@@ -1,0 +1,76 @@
+1. How many Star Wars characters are in the dataset?  
+   Answer: Input the number of characters in the dataset.
+
+2. Find the eye color of the characters and their counts.  
+   Answer: {'brown': 3, 'blue-gray': 1, 'blue': 6, 'yellow': 2, 'red': 2, 'black': 1, 'orange': 1}
+
+3. What is the most predominant eye color among all characters, and what is its count?  
+   Answer: 'brown': 6  
+
+4. How many female characters are listed?  
+   Answer: Input an integer value.
+
+5. What is the average height of all characters?  
+   Answer: Average height = Sum of all character heights / Number of characters  
+
+6. Find the films directed by George Lucas.  
+   Answer: {'The Phantom Menace', 'Attack of the Clones', 'A New Hope', ...}
+
+7. How many films were directed by George Lucas in total?  
+   Answer: Input a count (e.g., 3, 4, 5).
+
+8. Provide the name of the character who possesses the highest weight among all characters.  
+   Answer: Input the name of the character. Ignore weights marked as 'unknown'.
+
+9. Name of the character that is a dwarf.  
+   Answer: Input the name of the shortest character with height < 100 cm.  
+
+10. Total number of distinct films.  
+    Answer: Input the number of unique films.
+
+11. Films that were produced by more than one person.  
+    Answer: {'Black Bird': ['Gary Kurtaz', 'Adult Smith'], 'Return of the Jedi': [...], ...}
+
+12. Films in chronological order.  
+    Answer: {datetime.datetime(1999, 5, 19, 0, 0): 'The Phantom Menace', ...}
+
+13. Create a list of films sorted lexicographically.  
+    Answer: ["A New Hope", "Attack of the Clones", ..., "The Phantom Menace"]
+
+14. Which characters appeared in multiple films?  
+    Answer: {'Luke Skywalker': [...], 'Han Solo': [...], ...}
+
+15. Films and their director names.  
+    Answer: [('A New Hope', 'George Lucas'), ...]
+
+16. Characters' homeworld and its size.  
+    Answer: {('Nal Hutta', 12150), ('Rodia', 7549), ...}
+
+17. Star Wars species with red eyes.  
+    Answer: {'Wookie', ...}
+
+18. Characters sharing the same skin color.  
+    Answer: {'fair': ['Luke Skywalker', ...], 'gold': ['Darth Vader'], ...}
+
+19. Find the characters from the same planet.  
+    Answer: {'Eriadu': {'Wilhuff Tarkin'}, ...}
+
+20. Names of characters and their frequency of appearances in films.  
+    Answer: {'Luke Skywalker': 4, 'Darth Vader': 3, ...}
+
+21. Which characters appeared in all the films?  
+    Answer: ['Luke Skywalker', 'Darth Vader']
+
+22. Normalize the data to remove duplicates.  
+    Answer: {'Naboo': {'diameter': '12120', 'population': '4500000000', 'characters': ['R2-D2']}, ...}
+
+23. What is the total population of all the homeworlds combined?  
+    Answer: Input the total population (excluding unknowns).
+
+24. Films and their producers.  
+    Answer: {'A New Hope': {'Gary Kurtz', 'Rick McCallum'}, ...}
+
+25. Height and mass of each character.  
+    Answer:  
+    male_height_mass: {'Luke Skywalker': (172, 77), ...}  
+    female_height_mass: {'Leia Organa': (150, 49), ...}

@@ -1,0 +1,78 @@
+1. Which of the following options are correct about the list?
+   - pop() method removes an element from the end of the list.  
+   - append() method adds an element to the end of the list.  
+   - insert() method adds an element to the beginning, middle, or end of the list.
+
+2. Which of the following is true about a Python dictionary?
+   -It can be modified once it is created.
+   -It is an ordered collection of elements.
+
+3. Which of the following methods can be used to add a key-value pair to a Python dictionary? 
+   - update()
+
+4. Which of the following methods can be used to get a list of key-value pairs from a Python dictionary?
+   - items()
+
+5. Which of the following is true about slicing in Python lists?  
+   - It is possible to slice a list from both the beginning and end.
+
+6. Which of the following methods can be used to remove a specific element from a Python list?  
+   - remove()
+
+7. Which of the following is true about a Python List and Dictionary?  
+   - A dictionary can contain keys and values of different data types.  
+   - A list can contain elements of different data types.
+
+8. Which of the following methods can be used to add multiple elements to a Python list at once?  
+   - extend()
+
+9. Which of the following is true about the zip() function in Python?  
+   - It is used to create a list of tuples from two or more lists.
+
+10. What is the output of the following code?  
+   - [1, 2, 0, 0, 0]
+
+11. Which of the following is a valid way to create an empty dictionary in Python?  
+   - my_dict = dict()  
+   - my_dict = {}
+
+12. What is the output of the following code?  
+   - 2, 0
+
+13. What is the output of the following code?  
+   - [1, 2, 3, 'apple', 'banana']
+
+14. Which of the following is a valid way to add a new key-value pair to a dictionary in Python?  
+   - my_dict[key] = value
+
+15. What is the output of the following code?  
+   - [2, 4, 6]
+
+16. Which of the following methods can be used to sort a Python list in place?  
+   - sort()
+
+17. Which of the following is a valid way to create a dictionary with keys based on a list and values based on a second list of the same length?  
+   - my_dict = dict(zip([1, 2, 3], ['a', 'b', 'c']))
+
+18. What is the output of the following code?  
+   - [0, 4, 16, 36, 64]
+
+19. Which of the following is a valid way to remove a key-value pair from a Python dictionary?  
+   - my_dict.pop('key')  
+   - del my_dict['key']
+
+20. Which of the following is a valid way to create a list of integers from 0 to 99 using a list comprehension?  
+   - [x for x in range(100)]
+
+21. Which of the following is a valid way to check if a key is in a Python dictionary?  
+   - 'key' in my_dict  
+   - my_dict.get('key') is not None
+
+22. Which of the following is a valid way to remove a key-value pair from a Python dictionary?  
+   - del my_dict['key']
+
+23. Which of the following statements about list comprehensions in Python is true?  
+   - List comprehensions can be nested to create more complex expressions.
+
+24. What is the output of the following code?
+   - {'apple': 4, 'banana': 3, 'orange': 4, 'pear': 1}

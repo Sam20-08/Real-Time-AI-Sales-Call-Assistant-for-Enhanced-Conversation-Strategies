@@ -1,0 +1,11 @@
+1. In the hyperparameter tuning lab, which evaluation metric is used to measure the performance of the logistic regression model?  
+
+Answer: Accuracy  
+
+2. What is the purpose of hyperparameter tuning in machine learning?  
+
+Answer: To find the best combination of hyperparameters for the model.  
+
+3. What does the plot in the final step of the lab indicate?  
+
+Answer: The testing accuracy of the logistic regression model.  

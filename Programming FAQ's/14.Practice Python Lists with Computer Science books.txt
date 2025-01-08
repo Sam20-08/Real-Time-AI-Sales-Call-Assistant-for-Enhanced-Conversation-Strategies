@@ -1,0 +1,102 @@
+1. Find Unique Elements in a List
+
+Q: Implement the unique_list_elements function that takes a list as input and returns a new list with only the unique elements from the original list.
+
+A: def unique_list_elements(lst):
+    return list(set(lst))
+
+2. Find Common Elements in Two Lists
+
+Q: Implement the get_common function that takes two lists as input and returns a new list containing only the common elements present in both lists.
+
+A:def get_common(lst1, lst2):
+    return list(set(lst1).intersection(lst2))
+
+3. Calculate Average of Numbers
+
+Q: Create the get_average function that accepts a list of numbers as input and calculates the average of those numbers.
+
+A:def get_average(lst):
+    return sum(lst) / len(lst)
+
+4. Sort Strings Alphabetically
+
+Q: Define the sort_alphabets function, which accepts a list of strings as input and generates a new list with the strings sorted in alphabetical order.
+
+A:def sort_alphabets(lst):
+    return sorted(lst)
+
+5. Square Numbers in a List
+
+Q: Create the square_list function that takes a list of numbers as input and generates a new list with each number squared.
+
+A:def square_list(lst):
+    return [x**2 for x in lst]
+
+
+6. Map String Lengths
+
+Q: Create the count_len function, which accepts a list of strings as input and returns a new list where each element represents the length of the corresponding string in the input list.
+
+A:def count_len(lst):
+    return [len(s) for s in lst]
+
+7. Count Unique Books
+
+Q: Count the unique books in the computer_science_books list.
+
+A:unique_books = list(set(computer_science_books))
+print(len(unique_books))
+
+8. Verify the Presence of a Specific Book
+
+Q: Check if the book "Algorithms to Live By: The Computer Science of Human Decisions by Brian Christian" is in the dataset. If not, add it to the list.
+
+A: book = "Algorithms to Live By: The Computer Science of Human Decisions by Brian Christian"
+if book not in computer_science_books:
+    computer_science_books.append(book)
+
+9. Replace an Item in the List
+
+Q: Replace the book "Pattern Recognition and Machine Learning by Christopher M. Bishop" with "Pattern Recognition and Machine Learning 2006 2nd Edition by Christopher M. Bishop" in the list.
+
+A:computer_science_books = [book.replace("Pattern Recognition and Machine Learning by Christopher M. Bishop", "Pattern Recognition and Machine Learning 2006 2nd Edition by Christopher M. Bishop") for book in computer_science_books]
+
+10. Find Duplicates
+
+Q: Count the occurrences of the book "Python Machine Learning by Sebastian Raschka and Vahid Mirjalili".
+
+A:count_python_ml = computer_science_books.count("Python Machine Learning by Sebastian Raschka and Vahid Mirjalili")
+print(count_python_ml)
+
+11. Remove Duplicate Books
+
+Q: Create a new list unique_books which contains only the unique books from the computer_science_books list.
+
+A:unique_books = list(set(computer_science_books))
+
+12. Sort the Books Alphabetically
+
+Q: Sort the computer_science_books list in alphabetical order.
+
+A:computer_science_books.sort()
+
+13. Create List of Books Less Than 60 Characters Long
+
+Q: Create a list less_than_60 that contains books with names less than 60 characters long.
+
+A:less_than_60 = [book for book in computer_science_books if len(book) < 60]
+
+14. Shortest and Longest Book Names
+
+Q: Find the book with the shortest name and the book with the longest name. Store them in the variables shortest_book and longest_book.
+
+A:shortest_book = min(computer_science_books, key=len)
+longest_book = max(computer_science_books, key=len)
+
+15. Count Characters in Shortest Name
+
+Q: How many characters are there in the shortest book name?
+
+A:print(len(shortest_book))
+

@@ -1,0 +1,93 @@
+1. Students who did not take the exam
+python
+no_exam = [(student_ids[i], names[i]) for i in range(len(scores)) if scores[i] == 0]
+print(no_exam)
+# Output: [(2, 'Ankit'), (6, 'Ritu')]
+
+ 2. Total number of students present in the exam
+python
+total_present = sum(1 for score in scores if score > 0)
+print(total_present)
+# Output: 6
+
+
+ 3. Calculate the average score of students
+python
+male_scores = [scores[i] for i in range(len(scores)) if genders[i] == 'Male' and scores[i] > 0]
+female_scores = [scores[i] for i in range(len(scores)) if genders[i] == 'Female' and scores[i] > 0]
+
+avg_score_male = sum(male_scores) / len(male_scores)
+avg_score_female = sum(female_scores) / len(female_scores)
+
+print(avg_score_male, avg_score_female)
+# Output: 70.0, 72.5
+
+ 4. Calculate the median score of the class
+python
+present_scores = sorted([score for score in scores if score > 0])
+n = len(present_scores)
+median_score = (present_scores[n//2] if n % 2 != 0 else 
+               (present_scores[n//2 - 1] + present_scores[n//2]) / 2)
+
+print(median_score)
+# Output: 75.0
+
+ 5. Students who attended and not attended the class
+python
+attended = [[student_ids[i], names[i], scores[i]] for i in range(len(scores)) if scores[i] > 0]
+not_attended = [[student_ids[i], names[i], scores[i]] for i in range(len(scores)) if scores[i] == 0]
+
+print(attended, not_attended)
+# Output: [[1, 'Amit', 50], ...] [[2, 'Ankit', 0], ...]
+
+ 6. Students who failed the exam
+python
+failed = [[names[i], scores[i]] for i in range(len(scores)) if scores[i] > 0 and scores[i] < 40]
+print(failed)
+# Output: []
+
+ 7. Total male and female students
+python
+total_male = sum(1 for gender in genders if gender == 'Male')
+total_female = sum(1 for gender in genders if gender == 'Female')
+
+print(f"{total_male}, {total_female}")
+# Output: 4, 4
+
+ 8. Male students who attended the exam
+python
+male_student_exam = [[names[i], scores[i]] for i in range(len(scores)) if genders[i] == 'Male' and scores[i] > 0]
+print(male_student_exam)
+# Output: [['Amit', 50], ['Aman', 70], ['Arjun', 90]]
+
+ 9. Percentage of male students who passed the exam
+python
+male_passed = sum(1 for i in range(len(scores)) if genders[i] == 'Male' and scores[i] >= 40)
+male_pass_percentage = (male_passed / len(male_scores)) * 100
+
+print(male_pass_percentage)
+# Output: 100.0
+
+ 10. Percentage of female students who passed the exam
+python
+female_passed = sum(1 for i in range(len(scores)) if genders[i] == 'Female' and scores[i] >= 40)
+female_pass_percentage = (female_passed / len(female_scores)) * 100
+
+print(female_pass_percentage)
+# Output: 100.0
+
+ 11. Topper performers
+python
+topper_performers = [(student_ids[i], names[i], scores[i]) for i in range(len(scores)) if scores[i] >= 90]
+print(topper_performers)
+# Output: [(4, 'Arjun', 90), (8, 'Maya', 95)]
+
+
+ 12. Male and female topper performers
+python
+male_toppers = sum(1 for i in range(len(scores)) if genders[i] == 'Male' and scores[i] >= 90)
+female_toppers = sum(1 for i in range(len(scores)) if genders[i] == 'Female' and scores[i] >= 90)
+
+print(f"{male_toppers}, {female_toppers}")
+# Output: 1, 1
+

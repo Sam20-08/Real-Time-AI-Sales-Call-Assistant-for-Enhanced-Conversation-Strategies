@@ -1,0 +1,57 @@
+
+
+1. Lower-case all the companies in `sp_companies`:
+   
+   [company.lower() for company in sp_companies]
+   
+
+2. Standardize all the values in `electricity_demand`:
+   
+   [(value - 29617) / 5566 for value in electricity_demand]
+   
+
+3. Filter the values in `electricity_demand` that are greater than the mean:
+   
+   [value for value in electricity_demand if value > 29617]
+   
+
+4. Filter only companies that end with an `X`:
+   python
+   [company for company in sp_companies if company.endswith('X')]
+ 
+
+5. Return the length of the ticker for companies that end with an `L`:
+   
+   [len(company) for company in sp_companies if company.endswith('L')]
+   
+
+6. Return the ticker and its length for companies that contain an `X`:
+   
+   [(company, len(company)) for company in sp_companies if 'X' in company]
+   
+
+7. Format the result from the previous activity as a string:
+   
+   [f"Ticker: {company}. Ticker Length: {len(company)}" for company in sp_companies if 'X' in company]
+   
+
+8. What's the mean of the prices in `sp_prices`:
+   
+   import statistics
+   mean_price = int(statistics.mean([price for _, price in sp_prices]))
+   
+
+9. Return ticker and stock price of companies in `sp_prices` whose price is above the mean:
+   
+   [(ticker, price) for ticker, price in sp_prices if price > mean_price]
+   
+
+10. Return the price of the stocks of the FAANG companies:
+    
+    [price for ticker, price in sp_prices if ticker in faang_tickers]
+    
+
+11. Return the price and ticker of companies starting with `B` and containing an `X`:
+    
+    [(price, ticker) for ticker, price in sp_prices if ticker.startswith('B') and 'X' in ticker]
+

@@ -1,0 +1,47 @@
+Here are the answers with their respective questions:
+
+1. Append 'world' to list  
+   - l.append('world')
+
+2. Concatenate the two lists  
+   - concat_result = l1 + l2
+
+3. Concatenate, shortest first  
+   - def concatenate_shortest_first(l1, l2): return l1 + l2 if len(l1) <= len(l2) else l2 + l1
+
+4. How many words does the variable words contain?  
+   - len(words)
+
+5. What's the 500th word in the words list?  
+   - words[499]
+
+6. Select the sublist containing the words from position 100th to 150th  
+   - words_100_to_150 = words[99:150]
+
+7. Select the sublist containing the last 50 words  
+   - last_50_words = words[-50:]
+
+8. Check the words that are part of the words list  
+   - check_words = ['python', 'panda', 'blank', 'dank', 'water', 'david']  
+     valid_words = [word for word in check_words if word in words]
+
+9. How many words finish with the character x?  
+   - sum(1 for word in words if word.endswith('x'))
+
+10. Find all the words that have the substring cc in them  
+   - words_with_cc = [word for word in words if 'cc' in word]
+
+11. Find all the words that start and end with a y  
+   - words_with_y = [word for word in words if word.startswith('y') and word.endswith('y')]
+
+12. Find the words that contain the characters s, m and b in order of occurrence  
+   - samba_words = [word for word in words if 's' in word and 'm' in word[word.index('s'):].find('m') != -1 and 'b' in word[word.index('m'):]]
+
+13. How many words contain the substring zaz?  
+   - sum(1 for word in words if 'zaz' in word)
+
+14. Find all the words in an even position  
+   - even_positioned_words = words[1::2]
+
+15. Iterate the list in reverse order, and find all the words that start with s and end with y  
+   - words_s_y_reversed = [word for word in reversed(words) if word.startswith('s') and word.endswith('y')]

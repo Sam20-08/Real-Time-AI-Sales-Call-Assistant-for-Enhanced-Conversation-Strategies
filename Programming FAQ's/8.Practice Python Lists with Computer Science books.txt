@@ -1,0 +1,101 @@
+
+1.Find Unique Elements in a List
+def unique_list_elements(lst):
+    return list(set(lst))
+
+print(unique_list_elements([2, 3, 2, 3, 4, 5, 6, 5, 6, 6]))
+
+
+2.Find Common Elements in Two Lists
+def get_common(list1, list2):
+    return list(set(list1) & set(list2))
+
+input_list_1 = [1, 2, 3, 4, 5]
+input_list_2 = [4, 5, 6, 7, 8]
+print(get_common(input_list_1, input_list_2))
+
+
+3.Calculate Average of Numbers
+def get_average(numbers):
+    return sum(numbers) / len(numbers)
+
+print(get_average([34, 21, 78, 96, 12, 15]))
+
+
+4.Sort Strings Alphabetically
+def sort_alphabets(strings):
+    return sorted(strings)
+
+print(sort_alphabets(['e', 'd', 'f', 'a', 'c', 'b']))
+
+5.Square Numbers in a List
+def square_list(numbers):
+    return [num ** 2 for num in numbers]
+
+print(square_list([1, 3, 5, 7, 9]))
+
+
+6.Map String Lengths
+def count_len(strings):
+    return [len(string) for string in strings]
+
+print(count_len(['af', 'jk', 'lpoil', 'ptyuh']))
+
+
+7.Count Unique Books in computer_science_books computer_science_books = ["Introduction to the Theory of Computation by Michael Sipser", "Cracking the Coding Interview by Gayle Laakmann McDowell", "Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin","The Pragmatic Programmer: Your Journey to Mastery by Andrew Hunt and David Thomas", "Algorithms to Live By: The Computer Science of Human Decisions by Brian Christian and Tom Griffiths"]
+
+print(len(set(computer_science_books)))
+
+
+8.Verify the Presence of a Specific Book
+book = "Algorithms to Live By: The Computer Science of Human Decisions by Brian Christian"
+if book not in computer_science_books:
+    computer_science_books.append(book)
+
+print(computer_science_books)
+
+
+9.Replace an Item in the List
+old_book = "Pattern Recognition and Machine Learning by Christopher M. Bishop"
+new_book = "Pattern Recognition and Machine Learning 2006 2nd Edition by Christopher M. Bishop"
+computer_science_books = [new_book if b == old_book else b for b in computer_science_books]
+
+print(computer_science_books)
+
+
+10.Find Duplicate Counts
+book_to_check = "Python Machine Learning by Sebastian Raschka and Vahid Mirjalili"
+count_python_ml = computer_science_books.count(book_to_check)
+
+print(count_python_ml)
+
+
+11.Remove Duplicates in the Dataset
+unique_books = list(set(computer_science_books))
+
+print(unique_books)
+
+
+12.Sort Books in Alphabetical Order
+computer_science_books.sort()
+
+print(computer_science_books)
+
+
+13.Create a List of Books Less than 60 Characters
+less_than_60 = [book for book in computer_science_books if len(book) < 60]
+
+print(less_than_60)
+
+
+14.Find Shortest and Longest Books
+shortest_book = min(computer_science_books, key=len)
+longest_book = max(computer_science_books, key=len)
+
+print("Shortest Book:", shortest_book)
+print("Longest Book:", longest_book)
+
+
+15.Number of Characters in Shortest Book
+print(len(shortest_book))
+
